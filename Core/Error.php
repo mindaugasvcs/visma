@@ -27,8 +27,8 @@ class Error
     {
         if ($exception instanceof ValidationException) {
             $message = $exception->getErrors();
-        } elseif ($exception instanceof \UnexpectedValueException) {
-            $message = [$exception->getErrors()];
+        } elseif ($exception instanceof \ErrorException) {
+            $message = [$exception->getMessage()];
         } else {
             $message = [
                 "Uncaught exception: '". \get_class($exception). "' with message '{$exception->getMessage()}'",

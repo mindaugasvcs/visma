@@ -236,7 +236,7 @@ A vertical bar that separates two or more elements indicates that any one of the
     {
         $path = self::getFullPath(self::FILENAME);
         if(!is_file($path)) {
-            throw new \UnexpectedValueException("Cannot open file \"$path\"\n");
+            throw new \ErrorException("Cannot open file \"$path\"\n");
         }
 
         return json_decode(file_get_contents($path), true, 8, JSON_THROW_ON_ERROR);
