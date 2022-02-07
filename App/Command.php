@@ -133,6 +133,7 @@ A vertical bar that separates two or more elements indicates that any one of the
         });
 
         $colWidths = [14, 30, 35, 20, 45, 22];
+        $line = 'No records found.';
         foreach ($result as $key => $value) {
             if ($key == array_key_first($result)) {
                 $combined = array_combine($colWidths, ['id' => 'ID'] + array_keys($value));
